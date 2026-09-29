@@ -1,28 +1,42 @@
-Netflix Content Analysis
+🎬 Netflix Real-Time Content & Audience Analytics
 
-📊 Project Overview
+An end-to-end data analytics project analyzing Netflix's global catalog, audience ratings, and multi-year growth trends. This project integrates data cleaning in Python, relational SQL querying, and a dynamic 4-page Power BI dashboard.
 
-This project analyzes Netflix movies and TV shows to understand content distribution, ratings, countries, release trends, and content types.
 
- 🛠️ Tools Used
+📊 Dashboard Previews
 
-- Power BI
+1. Content Overview
+![Overview](Screenshot%202026-09-29%20233051.png)
 
-📌 Key Analysis
+2. Content Trends
+![Content Trends](Screenshot%202026-09-29%20233108.png)
 
-- Movies vs TV Shows
-- Content by Rating
-- Top Countries
-- Content Released by Year
-- Popular Content Categories
-- Netflix Content Trends
+3. Geography & Ratings
+![Geography and Ratings](Screenshot%202026-09-29%20233122.png)
 
-📈 Dashboard
+4. Key Insights
+![Key Insights](Screenshot%202026-09-29%20233137.png)
 
-An interactive Power BI dashboard was created to explore Netflix content and identify meaningful trends and patterns.
 
- 📁 Project File
+🛠️ Tech Stack & Pipeline
 
-The Power BI project file is included in this repository:
+Python, Pandas & NumPy:
+  - Handled missing values across ratings, countries, and languages.
+  - Parsed date timestamps into `year_added` and `month_added` features.
+  - Separated runtimes into numeric minutes for movies and season counts for TV shows using NumPy vectorization.
+SQL (SQLite Queries):
+  - Computed top-level catalog KPIs and content distributions.
+  - Aggregated top-performing countries and genres.
+  - Applied window functions (`LAG()`) to calculate Year-over-Year (YoY) content growth.
+Power BI:
+  - Designed a dark-themed Netflix UI with custom red branding and dynamic left-navigation tabs.
+  - Built custom DAX measures for KPI summaries and growth rates.
+  - Visualized insights using treemaps, matrix tables, donut charts, scatter plots, and stacked bars.
 
-`NETFLIX FINAL PROJECT.pbix`
+
+📂 Repository Contents
+
+- `NETFLIX_PROJECT.ipynb` - Complete Python, Pandas, NumPy & SQL data pipeline.
+- `netflix_real_time_project_dataset.csv` - Raw source catalog data.
+- `netflix_cleaned_final.csv` - Cleaned and transformed dataset.
+- `NETFLIX FINAL PROJECT.pbix` - Multi-page Power BI workbook.
